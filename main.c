@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 // author : https://github.com/jf17
-
 #define ERROR_FILE_OPEN -3
 
 FILE *stream, *stream2;
@@ -14,14 +13,14 @@ void main() {
 	errno_t err;
 
 	// Open for read (will fail if file "crt_fopen_s.c" does not exist)  
-	err = fopen_s(&stream, "HV510.PAT", "rb");
+	err = fopen_s(&stream, "HV510.BIN", "rb");
 	if (err == 0)
 	{
-		printf("The file 'HV510.PAT' was opened\n");
+		printf("The file 'HV510.BIN' was opened\n");
 	}
 	else
 	{
-		printf("The file 'HV510.PAT' was not opened\n");
+		printf("The file 'HV510.BIN' was not opened\n");
 	}
 
 	for (int i = 0; i < max; i++){
@@ -37,11 +36,11 @@ void main() {
 		err = fclose(stream);
 		if (err == 0)
 		{
-			printf("The file 'HV510.PAT' was closed\n");
+			printf("The file 'HV510.BIN' was closed\n");
 		}
 		else
 		{
-			printf("The file 'HV510.PAT' was not closed\n");
+			printf("The file 'HV510.BIN' was not closed\n");
 		}
 	}
 	int sadfsd = 0;

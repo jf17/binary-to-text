@@ -16,7 +16,10 @@ struct Map_int_char {
 
 void main() {
 	 int max = 1024;
+
 	int arr[1024];
+	char result[1024];
+
 	errno_t err;
 
 	// Open for read (will fail if file "crt_fopen_s.c" does not exist)  
@@ -49,6 +52,15 @@ void main() {
 	alphabet_array[3].value = '3';
 	
 
+	for (int i = 0; i < max; i++) {
+	
+		for (int j = 0; j < 47; j++) {
+			if (arr[i] == alphabet_array[j].key) { result[i] = alphabet_array[j].value; }
+		
+		}
+	}
+
+
 	// Close stream if it is not NULL   
 	if (stream)
 	{
@@ -62,7 +74,8 @@ void main() {
 			printf("The file 'HV510.BIN' was not closed\n");
 		}
 	}
-	int sadfsd = 0;
+
+	int sadfsd = 0; // stop debug 
 
 
 	// All other files are closed:  

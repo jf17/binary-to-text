@@ -81,6 +81,5 @@ void main() {
 	// All other files are closed:  
 	int numclosed = _fcloseall();
 	printf("Number of files closed by _fcloseall: %u\n", numclosed);
-	printf("Number of files closed by _fcloseall: %c\n", alphabet_array[0].value);
 	_getch();
 }

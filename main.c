@@ -3,9 +3,16 @@
 #include <stdlib.h>
 
 // author : https://github.com/jf17
+
 #define ERROR_FILE_OPEN -3
 
 FILE *stream, *stream2;
+
+struct Map_int_char {
+	int key;
+	char value;
+};
+
 
 void main() {
 	 int max = 1024;
@@ -28,6 +35,18 @@ void main() {
 		arr[i] = getc(stream);
 	}
 
+	struct Map_int_char alphabet_array[47];
+	alphabet_array[0].key = 240;
+	alphabet_array[0].value = '0';
+
+	alphabet_array[1].key = 241;
+	alphabet_array[1].value = '1';
+
+	alphabet_array[2].key = 242;
+	alphabet_array[2].value = '2';
+
+	alphabet_array[3].key = 243;
+	alphabet_array[3].value = '3';
 	
 
 	// Close stream if it is not NULL   
@@ -49,5 +68,6 @@ void main() {
 	// All other files are closed:  
 	int numclosed = _fcloseall();
 	printf("Number of files closed by _fcloseall: %u\n", numclosed);
+	printf("Number of files closed by _fcloseall: %c\n", alphabet_array[0].value);
 	_getch();
 }

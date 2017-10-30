@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 // author : https://github.com/jf17
-
 #define ERROR_FILE_OPEN -3
 
 FILE *stream, *stream2;
@@ -55,7 +54,8 @@ void main() {
 	for (int i = 0; i < max; i++) {
 	
 		for (int j = 0; j < 47; j++) {
-			if (arr[i] == alphabet_array[j].key) { result[i] = alphabet_array[j].value; }
+			if (arr[i] == 0) { result[i] = '*'; }
+			else if (arr[i] == alphabet_array[j].key) { result[i] = alphabet_array[j].value; }
 		
 		}
 	}

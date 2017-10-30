@@ -21,7 +21,7 @@ void main() {
 
 	errno_t err;
 
-	// Open for read (will fail if file "crt_fopen_s.c" does not exist)  
+	// Open for read (will fail if file "HV510.BIN" does not exist)  
 	err = fopen_s(&stream, "HV510.BIN", "rb");
 	if (err == 0)
 	{

@@ -14,7 +14,7 @@ struct Map_int_char {
 
 
 void main() {
-	 int max = 1024;
+	int max = 1024;
 
 	int arr[1024];
 	char result[1024];
@@ -118,10 +118,25 @@ void main() {
 		}
 	}
 
+	if (stream2)
+	{
+		err = fclose(stream2);
+		if (err == 0)
+		{
+			printf("The file 'HV510.BIN' was closed\n");
+		}
+		else
+		{
+			printf("The file 'HV510.BIN' was not closed\n");
+		}
+	}
+
+
+
 	int sadfsd = 0; // stop debug 
 
 
-	// All other files are closed:  
+					// All other files are closed:  
 	int numclosed = _fcloseall();
 	printf("Number of files closed by _fcloseall: %u\n", numclosed);
 	_getch();
